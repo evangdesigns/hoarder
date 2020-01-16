@@ -22,18 +22,18 @@ const getStuffByUid = (uid) => new Promise((resolve, reject) => {
     });
 });
 
-const deleteStuff = (stuffId) => axios.delete(`${baseUrl}/stuffs/${stuffId}.json`);
+const deleteItem = (stuffId) => axios.delete(`${baseUrl}/stuffs/${stuffId}.json`);
 
-const getSingleStuff = (stuffId) => axios.get(`${baseUrl}/stuffs/${stuffId}.json`);
+const getSingleItem = (stuffId) => axios.get(`${baseUrl}/stuffs/${stuffId}.json`);
 
-const saveStuff = (stuffInfo) => axios.post(`${baseUrl}/stuffs.json`, stuffInfo);
+const saveItem = (stuffInfo) => axios.post(`${baseUrl}/stuffs.json`, stuffInfo);
 
-const updateStuff = (stuffId, newStuffInfo) => axios.put(`${baseUrl}/stuffs/${stuffId}.json`, newStuffInfo);
+const updateItem = (stuffId, newStuffInfo) => axios.put(`${baseUrl}/stuffs/${stuffId}.json`, newStuffInfo);
 
 export default {
   getStuffByUid,
-  getSingleStuff,
-  saveStuff,
-  updateStuff,
-  deleteStuff,
+  getSingleItem,
+  saveItem,
+  updateItem,
+  deleteItem,
 };

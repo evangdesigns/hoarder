@@ -19,7 +19,6 @@ class Board extends React.Component {
           {/* <button className="btn btn-danger" onClick={ / }>X</button> */}
           <img src={stuff.itemImage} alt={stuff.itemName}/>
           <h3 className="card-title">{stuff.itemName}</h3>
-          <p>{stuff.itemDescription}</p>
           <Link className="btn btn-link" to={`/stuff/${stuff.id}`}>VIEW ITEM</Link>
           <Link className="btn btn-link" to={`/stuff/${stuff.id}/edit`}>EDIT</Link><br/>
         </div>
