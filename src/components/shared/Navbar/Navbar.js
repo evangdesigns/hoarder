@@ -25,10 +25,10 @@ class Navbar extends React.Component {
               <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/">My Stuff</Link>
+              <Link className="nav-link" to="/stuff">My Stuff</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/">New</Link>
+              <Link className="nav-link" to="/stuff/new">New</Link>
             </li>
             <li className="nav-item">
               <button className="nav-link btn btn-danger" onClick={this.logMeOut}>LogOut</button>
