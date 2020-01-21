@@ -21,12 +21,18 @@ class MyStuff extends React.Component {
     this.getStuff();
   }
 
+  deleteItem = (stuffId) => {
+    stuffData.deleteItem(stuffId)
+      .then(() => this.getStuff())
+      .catch((err) => console.error('error deleting item', err));
+  }
+
   render() {
     return (
       <div className="MyStuff">
         <h1>My Stuff</h1>
         <div className="MyStuff d-flex flex-wrap justify-content-center">
-          {this.state.stuffs.map((stuff) => <StuffCard key={stuff.id} stuff={stuff} />)}
+          {this.state.stuffs.map((stuff) => <StuffCard key={stuff.id} stuff={stuff} deleteItem={this.deleteItem}/>)}
         </div>
       </div>
     );
